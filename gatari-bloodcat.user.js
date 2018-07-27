@@ -28,5 +28,6 @@ function addBloodcatMirror(){
     }
 }
 $(document).ready(function(){
+    document.getElementsByClassName("beatmap-info")[0].style.width = "38%";
     init()
 });

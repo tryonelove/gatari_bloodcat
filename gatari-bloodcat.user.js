@@ -7,8 +7,7 @@
 // @include http*://osu.gatari.pw/s/*
 // ==/UserScript==
 
-var result = null,
-    mapID = null,
+var mapID = null,
     mapsetID = null;
 
 function init(){

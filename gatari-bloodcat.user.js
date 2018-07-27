@@ -25,8 +25,6 @@ function addBloodcatMirror(){
                 $("<a>").attr("href", "http://bloodcat.com/osu/s/" + mapsetID).addClass("btn btn-blue").text("Bloodcat")
             )
         );
-        // old mirror
-        //$(".beatmap_download_link").last().after("<br>",$("<a></a>").text("Bloodcat mirror").attr("href", "http://bloodcat.com/osu/s/" + mapsetID))
     }
 }
 $(document).ready(function(){

@@ -7,27 +7,16 @@
 // @include http*://osu.gatari.pw/s/*
 // ==/UserScript==
 
-var mapID = null,
-    mapsetID = null;
 
-function init(){
-    var temp;
-    temp = $(".beatmapTab.selected").attr("href").split("&")[0].split("/");
-    mapID = temp[temp.length - 1];
-    temp = $(".beatmap-preview").attr("src").split("/");
-    mapsetID = temp[temp.length - 1].split("l")[0];
-    addBloodcatMirror();
-}
+
 function addBloodcatMirror(){
-    if(mapsetID !== null){
-        $(".beatmap-downlaod").first().before(
-            $("<div>").addClass("beatmap-downlaod").append(
-                $("<a>").attr("href", "http://bloodcat.com/osu/s/" + mapsetID).addClass("btn btn-blue").text("Bloodcat")
-            )
-        );
+    if(beatmapSetID !== null){
+            $(".map-buttons").prepend(
+                $("<a>").attr("href", "http://bloodcat.com/osu/s/" + beatmapSetID).addClass("map-btn fav-btn").text("Bloodcat")
+            );
     }
 }
+
 $(document).ready(function(){
-    document.getElementsByClassName("beatmap-info")[0].style.width = "38%";
-    init()
+    addBloodcatMirror()
 });
